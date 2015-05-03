@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>Welcome to Package Pal</title>
+	<link rel='stylesheet' type='text/css' href='materialize.css' />
+  
+	<script type="text/javascript">
+		function validate()
+		{
+			if(document.login.uname.value == "")
+			{
+				alert("Forms cannot be blank!");
+				return false;
+			}
+			else if(document.login.pword.value == "")
+			{
+				alert("Forms cannot be blank!");
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+		}
+}
+	</script>
+  
+	</head>
+	
+	<style>
+html
+{
+   background-color: #fffff;}
+	
+body
+{
+	margin:1em 1.5em 1em 1.5em ;
+    padding: 1em 1em 1em 1em}
+	
+#head
+{
+    text-align: center;
+    background-color: #339989; 
+    color: #fcf9f4;
+	margin: 1em 1em 1em 1em;
+	border-style:solid;
+    border-width:medium;
+    border-radius: 5px;
+    border-color: #3e3131;}
+
+#name
+{
+	text-align: justify; 
+	padding: .5em .5em .5em .5em;
+	margin: 1em 1em 1em 1em;}
+
+#banner
+{
+	text-align: right;
+	border: 3px;
+	}
+
+#pack
+{
+	text-align: right;}
+
+#bodyi
+{
+    text-align:center;
+    background-color: #ffffff; 
+    color: #000000;
+    padding: 2em 3em 2em 1em;
+    margin: 1em 1em 1em 1em ;
+    opacity: 0.89;
+    border-width:medium;
+    border-radius: 5px;
+    border-color: #000000;
+	border-style: solid;
+	height: 500px;}
+
+#login
+{
+    padding: .5em .5em .5em .5em;
+    border-style:solid;
+    border-width:medium;
+    border-radius: 5px;
+    border-color: #000000;
+    margin: 2em 50em 2em 1em;
+    text-align:left;
+	width: 30%;}
+
+#ppal
+{
+	text-align: left;
+	border: 5em;
+	border-color: #000000;
+	border-radius: 5px;
+	border-width: medium;
+	border-style: solid;
+	padding-right: 2em;
+	padding-left: 2em;
+	padding-bottom: 2em;
+	float: right;
+	width: 60%;
+	margin-top: 2em; }
+	</style>
+
+		<body>
+			<div id ='head'>
+			<div id='name'>
+			   <a href = "index.html"><img src = "logo-packages.png" style="width: 150px; height: 120px;"></a>
+				<br>
+			   <b style = ' font-size: 25px'>PACKAGE</b><br>
+			   <b style = ' font-size: 25px'>P</b><br>
+			   <b style = ' font-size: 25px'>A</b><br>
+			   <b style = ' font-size: 25px'>L</b><br/>
+					<div id = 'banner'>
+						<b style = ' font-size: 20px'>Special Handling.</b>
+						<b style = ' font-size: 20px'>Extra Service</b>
+					</div>
+		
+			<div id='pack'>
+			
+                 <a class="waves-effect waves-light btn" href="index.html" id = "left">Trace a Shipment</button></a>
+                 <a class="waves-effect waves-light btn" href="index.html">Create a Shipment</button></a>
+                 <a class="waves-effect waves-light btn" href="index.html"id ="right">Claim</button></a>
+	
+			</div>
+		</div>
+		</div>
+		<div id = 'bodyi'>
+            <div id = 'ppal'>
+				<p>
+					Package Pal offers package tracking and status checking. 
+				</p>
+				<a href = "Trace.html"><img src = "search.png" style = "border-radius: 5px;"></a>
+			</div>
+			<div id = 'login'>
+			
+			<form action="Profile.jsp" method = "post">
+			
+                <h4>Enter login information</h4><br>
+				<form name = "login" >
+				
+				
+                Username: <input type=text name="uname"><br>
+                Password: <input type=password name = "pword"><br>
+				<br>
+                <a href = "Profile.jsp"><button class="waves-effect waves-light btn" type="submit" name="action" onclick = "return validate()"><i class="mdi-content-send right"></i>Submit
+				</button></a>
+				<br>
+ 
+                <lp>Not registered yet? Click <a href = "Register.html" ><span>here</span></a> to register.</lp>
+				</form>
+            </form>
+            </div>
+		</div>		
+		</form>
+	</body>
+</html>

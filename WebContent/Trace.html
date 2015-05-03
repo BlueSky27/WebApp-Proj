@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+			<title>Trace</title>
+	<link rel='stylesheet' type='text/css' href='materialize.css' />
+	
+	<script type="text/javascript" >  
+			function validate() {
+		var x = document.getElementById("tnum");
+		if(x.value === ""){  
+			alert("Form cannot be blank!");  
+			return false;
+			}	  
+		else if(x.value.length < 6)
+			{
+				alert("Must be 6 characters in length");
+				return false;
+			}  
+			
+			else(x.value.length ==6 || x.value.length >6)
+			{
+				return true;
+			}
+		}  
+	</script>
+	
+	</head>
+	<style>
+html
+{
+   background-color: #fffff;}
+	
+body
+{
+	margin:1em 1.5em 1em 1.5em ;
+    padding: 1em 1em 1em 1em}
+	
+#head
+{
+    text-align: center;
+    background-color: #339989; 
+    color: #fcf9f4;
+	margin: 1em 1em 1em 1em;
+	border-style:solid;
+    border-width:medium;
+    border-radius: 5px;
+    border-color: #3e3131;}
+
+#name
+{
+	text-align: justify; 
+	padding: .5em .5em .5em .5em;
+	margin: 1em 1em 1em 1em;}
+
+#banner
+{
+	text-align: right;
+	border: 3px;
+	}
+
+#pack
+{
+	text-align: right;}
+
+#bodyi
+{
+    text-align:center;
+    background-color: #fffafb; 
+    color: #000000;
+    padding: 2em 3em 2em 1em;
+    margin: 1em 1em 1em 1em ;
+    opacity: 0.89;
+    border-width:medium;
+    border-radius: 5px;
+    border-color: #3e3131;
+	height: 380px;}
+
+	
+#body
+{
+    text-align:center;
+    background-color: #fffafb; 
+    color: #000000;
+    padding: 2em 3em 2em 1em;
+    margin: 1em 1em 1em 1em ;
+    opacity: 0.89;
+    border-width:medium;
+    border-radius: 5px;
+    border-color: #3e3131;
+}
+
+
+	</style>
+	
+		<body>
+		<div id ='head'>
+			<div id='name'>
+			   <a href = "Profile.jsp"><img src = "logo-packages.png" style="width: 150px; height: 120px;"></a>
+			   <br><b style = ' font-size: 25px'>PACKAGE</b><br>
+			   <b style = ' font-size: 25px'>PAL</b><br><br/>
+					<div id = 'banner'>
+						<b style = ' font-size: 20px'>Special Handling.</b>
+						<b style = ' font-size: 20px'>Extra Service</b>
+					</div>
+			
+			
+			<div id='pack'>
+                <a class="waves-effect waves-light btn" href="Trace.html" id = "left">Trace a Shipment</button></a>
+                <a class="waves-effect waves-light btn" href="Create.html">Create a Shipment</button></a>
+                <a class="waves-effect waves-light btn" href="Claim.html"id ="right">Claim</button></a>
+	
+			</div>
+		</div>
+		</div>
+		<div class ='z-depth-1'>
+		<div id = 'body'>
+		<form action='Info.jsp'>
+        <p>To trace a sent package</p>
+		<form id = "trace">
+		<b>Enter tracking number: </b><input type = "text" id ="tnum" ">
+		</form>
+		<a href = "Info.jsp"><input type = "button" value = "submit" onclick = "return validate()" ></a>
+		</form>
+		</div>
+		</div>
+	</body>
+</html>

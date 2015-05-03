@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+			<title>Create a Shipment</title>
+	<link rel='stylesheet' type='text/css' href='materialize.css' />
+	
+	<script type="text/javascript">
+		function validate()
+		{
+			if(document.myform.a.value == "")
+			{
+				alert("Forms cannot be blank!");
+				return false;
+			}
+			else if(document.myform.b.value == "")
+			{
+				alert("Forms cannot be blank!");
+				return false;
+			}
+			else if(document.myform.c.value == "")
+			{
+				alert("Forms cannot be blank!");
+				return false;
+			}
+			else if(document.myform.d.value == "")
+			{
+				alert("Forms cannot be blank!");
+				return false;
+			}
+			else if(document.myform.e.value == "")
+			{
+				alert("Forms cannot be blank!");
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+		}
+	</script>
+	
+	</head>
+	<style>
+html
+{
+   background-color: #fffff;}
+	
+body
+{
+	margin:1em 1.5em 1em 1.5em ;
+    padding: 1em 1em 1em 1em}
+	
+#head
+{
+    text-align: center;
+    background-color: #339989; 
+    color: #fcf9f4;
+	margin: 1em 1em 1em 1em;
+	border-style:solid;
+    border-width:medium;
+    border-radius: 5px;
+    border-color: #3e3131;}
+
+#name
+{
+	text-align: justify; 
+	padding: .5em .5em .5em .5em;
+	margin: 1em 1em 1em 1em;}
+
+#banner
+{
+	text-align: right;
+	border: 3px;
+	}
+
+#pack
+{
+	text-align: right;}
+
+#bodyi
+{
+    text-align:center;
+    background-color: #fffafb; 
+    color: #000000;
+    padding: 2em 3em 2em 1em;
+    margin: 1em 1em 1em 1em ;
+    opacity: 0.89;
+    border-width:medium;
+    border-radius: 5px;
+    border-color: #3e3131;
+	height: 380px;}
+
+#login
+{
+    padding: .5em .5em .5em .5em;
+    border-style:solid;
+    border-width:medium;
+    border-radius: 5px;
+    border-color: #3e3131;
+    margin: 2em 50em 2em 1em;
+    text-align:left;
+	width: 30%;}
+
+#ppal
+{
+	text-align: left;
+	border: 5em;
+	border-color: #000000;
+	border-radius: 5px;
+	border-width: medium;
+	border-style: solid;
+	padding-right: 2em;
+	padding-left: 2em;
+	float: right;
+	width: 60%;
+	margin-top: 2em;}
+	
+#medium
+{	
+    background-color: #fffafb;
+	text-align: left;
+	color: #000000;
+	float: left;
+	border-color:#3e3131;
+	border: 2px;
+	border-style: solid;
+	border-radius:5px;
+	margin-top: 1em;
+	margin-left: 2em;
+	padding: 1em 1em 1em 1em;
+}	
+
+#bodyc
+{
+	text-align:left;
+    background-color: #fffafb; 
+    color: #000000;
+    padding: 2em 3em 2em 25em;
+    border-width:medium;
+    border-radius: 1px;
+    border-color: #3e3131;
+	margin-top: .007em;
+	float: center;
+	height: 35em;
+}
+	</style>
+
+		<body>
+			<div id ='head'>
+			<div id='name'>
+			   <a href = "Profile.jsp"><img src = "logo-packages.png" style="width: 150px; height: 120px;"></a>
+				<br>
+			   <b style = ' font-size: 25px'>PACKAGE</b><br>
+			   <b style = ' font-size: 25px'>PAL</b><br>
+					<div id = 'banner'>
+						<b style = ' font-size: 20px'>Special Handling.</b>
+						<b style = ' font-size: 20px'>Extra Service</b>
+					</div>
+		
+			<div id='pack'>
+			
+                 <a class="waves-effect waves-light btn" href="Trace.html" id = "left">Trace a Shipment</button></a>
+                 <a class="waves-effect waves-light btn" href="Create.html">Create a Shipment</button></a>
+                 <a class="waves-effect waves-light btn" href="Claim.html"id ="right">Claim</button></a>
+	
+			</div>
+			</div>
+		<div id = 'medium'>
+		<form action = "#">
+            <input  type="radio" name="medium" id="Air">
+			<label for= "Air">Air Cargo</label><img src = "plane.png" style="height: 120px; width: 130px;"/><br>
+			<input type="radio" name="medium" id="Sea">	
+			<label for= "Sea">Sea Freight</label><img src = "sea9.png" style="height: 120px; width: 130px;"/><br>
+			<input type="radio" name="medium" id="Land">
+			<label for ="Land">Land Delivery</label><img src = "del.png" style="height: 120px; width: 130px;"/><br>
+		</form>
+			<br>
+			<br>
+		</div>
+		<div class = 'z-depth-3'>
+		<div id = 'bodyc'>
+			
+			<form action="CreateS.jsp">
+		  
+			<li>Origin:   <input type=text name="a"></li>
+			<li>Destination:   <input type=text name="b"></li>
+			<li>Type of Package:   <input type=text name="c"></li>
+			<li>No. of Items:   <input type=text name="d"></li>
+			<li>Estimated Weight:    <input type=text name="e"></li>
+			<li>Receiver:    <input type=text name="f"></li>
+			<br>
+			<a href="CreateS.jsp"><input type=button value='Submit' onclick ="return validate()"></a>
+			</form>
+			</form>
+		</div>
+		</div>
+		</div>
+	</body>
+</html>
